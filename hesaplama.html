@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="text-align: center">
+        <h1>HESAPLAMA</h1>
+        <br>
+
+        <input type="text" id="txtSayi1"><br><br>
+        <input type="text" id="txtSayi2"><br><br>
+
+        <button onclick="hesapla(1)">TOPLA</button>
+        <button onclick="hesapla(2)">ÇIKARMA</button>
+        <button onclick="hesapla(3)">BÖLME</button>
+        <button onclick="hesapla(4)">ÇARPMA</button>
+        <hr>
+        <h1 id="sonuc"></h1>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+        });
+
+        function hesapla(tip) {
+            var deger1 = Number($('#txtSayi1').val());
+            var deger2 = Number($('#txtSayi2').val());
+
+            var sonuc;
+
+            switch (tip) {
+                case 1:
+                    sonuc = deger1 + deger2;
+                    break;
+                case 2:
+                    sonuc = deger1 - deger2;
+                    break;
+                case 3:
+                    sonuc = deger1 / deger2;
+                    break;
+                case 4:
+                    sonuc = deger1 * deger2;
+                    break;
+
+            }
+
+            $('#sonuc').text(sonuc);
+        }
+
+        function topla() {
+            var deger1 = $('#txtSayi1').val();
+            var deger2 = $('#txtSayi2').val();
+
+            $('#sonuc').text(Number(deger1) + Number(deger2));
+        }
+
+        function cikarma() {
+            var deger1 = $('#txtSayi1').val();
+            var deger2 = $('#txtSayi2').val();
+
+            $('#sonuc').text(Number(deger1) - Number(deger2));
+        }
+
+        function bolme() {
+            var deger1 = $('#txtSayi1').val();
+            var deger2 = $('#txtSayi2').val();
+
+            $('#sonuc').text(Number(deger1) / Number(deger2));
+        }
+
+        function carpma() {
+            var deger1 = $('#txtSayi1').val();
+            var deger2 = $('#txtSayi2').val();
+
+            $('#sonuc').text(Number(deger1) * Number(deger2));
+        }
+    </script>
+</body>
+
+</html>

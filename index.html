@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body class="divBody">
+
+    <div class="orta">
+        <div class="cerceve">
+            <h3 class="baslik">Bilgi İşlem Personelleri</h3>
+            <h3 class="baslik">Bilgi İşlem Personelleri 2</h3>
+            <p id="kural">*Kurallara uymak zorunludur!</p>
+        </div>
+
+        <ul id="listPersonel">
+            <li>Mustafa Can Özkan</li>
+            <li> Mehtap Ağır</li>
+            <li> Eren Güvercin</li>
+        </ul>
+
+        <div>
+            <p>Ad:</p>
+            <input type="text" id="txtAd">
+            <p>Soyad</p>
+            <input type="text" id="txtSoyad">
+            <br>
+            <button onclick="tikla()">Ekle</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#kural').text("Jquery ile değiştirdim");
+
+        });
+
+        function tikla() {
+            alert("TIKLANDI");
+            var ad = $('#txtAd').val();
+            var soyad = $('#txtSoyad').val();
+            console.log(ad + " " + soyad);
+            $('#listPersonel').html( "<li>" + ad + " " + soyad + "</li>");
+        }
+    </script>
+
+</body>
+
+</html>

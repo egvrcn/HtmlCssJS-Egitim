@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="text-align: center">
+        <h1>DÖNGÜLER</h1>
+        <br>
+       
+        <input type="number" id="txtSayi">
+        <button onclick="inputYaz()">INPUT YAZ</button>
+        <button onclick="donguYaz(15)">OTO YAZ</button>
+        <div id="yaziAlani"></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            
+        });
+
+        function inputYaz(){
+            var degerAl = $('#txtSayi').val();
+            var yazi = "";
+            for(var i=1; i<=degerAl; i++){
+                yazi += "<p>MERHABA " + i + "</p>";
+            }
+            $('#yaziAlani').html(yazi);    
+        }
+
+        function donguYaz(sayac){
+            var yazi = "";
+            for(var i=1; i<=sayac; i++){
+                yazi += "<p>MERHABA " + i + "</p>";
+            }
+            $('#yaziAlani').html(yazi);    
+        }
+    </script>
+</body>
+
+</html>
